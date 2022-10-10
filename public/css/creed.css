@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap');
+
+.formulario {
+	position: relative;
+	width: 580px;
+	background: #00AC91;
+	padding: 20px;
+	margin-bottom: 5px;
+	border-radius: 25px;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	/*box-shadow: 7px 13px 28px #000000;*/
+}
+
+.container {
+    width: 100vw;
+    height: 89vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :7rem;
+    padding: 0 2rem;
+}
+
+.home {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+}
+
+.formulario h4 {
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 10px;
+	font-weight: 600;
+	color: #333;
+}
+
+.textbox {
+	width: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	margin-bottom: 16px;
+	font-family: 'Montserrat', sans-serif;
+	color: #FFF;
+	font-size: 1.1em;
+	border-bottom: 2px solid #FFF;
+}
+
+.textbox::placeholder {
+	color: #FBFBFB;
+}
+
+.alinear {
+	width: 72%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	margin-bottom: 16px;
+	font-family: 'Montserrat', sans-serif;
+	color: #FFF;
+	font-size: 1.1em;
+	border-bottom: 2px solid #FFF;
+}
+
+.alinear::placeholder {
+	color: #FBFBFB;
+}
+
+.colonia {
+	width: 57%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	margin-bottom: 16px;
+	margin-right: 11px;
+	font-family: 'Montserrat', sans-serif;
+	color: #FFF;
+	font-size: 1.1em;
+	border-bottom: 2px solid #FFF;
+}
+
+.colonia::placeholder {
+	color: #FBFBFB;
+}
+
+.ciudad {
+	width: 40%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	margin-bottom: 16px;
+	font-family: 'Montserrat', sans-serif;
+	color: #FFF;
+	font-size: 1.1em;
+	border-bottom: 2px solid #FFF;
+}
+
+.ciudad::placeholder {
+	color: #FBFBFB;
+}
+
+.telef {
+	width: 25%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	margin-bottom: 16px;
+	margin-right: 10px;
+	font-family: 'Montserrat', sans-serif;
+	color: #FFF;
+	font-size: 1.1em;
+	border-bottom: 2px solid #FFF;
+}
+
+.telef::placeholder {
+	color: #FBFBFB;
+}
+
+/* .seleccion {
+	width: 30%;
+	background: #24303C;
+	padding: 8px;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	border: 1px solid rgb(0, 98, 159);
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-size: 18px;
+}
+ */
+.btn-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario .btn-control .boton {
+	width: 20%;
+	background-image: linear-gradient(to right, #1B186E, #342FD4, #3C36FA);
+	background-size: 200%;
+	border: none;
+	border-radius: 8px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+	transition: .5s;
+}
+
+.formulario .btn-control .boton:hover {
+	background-position: right;
+}
+
+#cancel {
+    width: 20%;
+	background-image: linear-gradient(to right, #D45050, #FC6060, #FA5F5F);
+	background-size: 200%;
+	border: none;
+	border-radius: 8px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+	transition: .5s;
+}
+
+.btn-control a {
+    color: #FFF;
+}
+
+.photo {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+input[type="file"] .photo {
+    border-radius: 10px;
+    border: none;
+}

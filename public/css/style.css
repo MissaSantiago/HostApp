@@ -1,0 +1,1006 @@
+/*----------------------------------- Menú de inicio y de las vistas ---------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap');
+
+.create {
+    margin-top: 96px;
+    align-items: center;
+    justify-content: center;
+    background: #00AC91;
+    width: 40%;
+    border-radius: 10px;
+    top: 58%;
+    left: 50%;
+    transform: translate(50%, 50%);    
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #FFF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-position: center;
+}
+
+.nav {
+    position: fixed;
+    background: #00AC91; /* #00BFA6 */
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 30px 7px;
+    transition: all 0.5s ease;
+    /* box-shadow: 1px 5px 5px -2px #88C9C6; */
+    z-index: 100;
+}
+
+.nav_search {
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 30px 7px;
+    transition: all 0.5s ease;
+}
+
+.back-header {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #FFF;
+    font-weight: 500;
+}
+
+.logo img {
+    height: 54px;
+    vertical-align: middle;
+}
+
+.logo p {
+    letter-spacing: 0.10em;
+    margin-left: 8px;
+    padding: 0;
+    font-size: 30px;
+    font-weight: 500;
+    color: #FFF;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+    margin: 10px;
+}
+
+.menu li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.menu li a:hover {
+    padding: 5px 10px;
+    background-image: linear-gradient(to right, #FC6060, #f05f5f, #fa6f6f);
+	background-size: 200%;
+    color: #FFF;
+    border-radius: 15px;
+    transition: .5s;
+    background-position: right;
+}
+
+.wave {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :7rem;
+    padding: 0 2rem;
+}
+
+.img {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.img img {
+	width: 500px;
+}
+
+/* a, li {
+    font-family: 'Montserrat', sans-serif; */
+    /*#00AC91*/
+/*     color: #FFF;
+}
+ */
+
+ 
+/* header {
+    background-color: #00AC91;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    box-shadow: #000 ;
+} */
+
+.edit {
+    background: #007bff;
+    border: 0.5px solid #007bff;
+    padding: .37rem .40rem;
+    border-radius: 0.6rem 0 0 0.6rem;
+    color: #FFF;
+    font-size: 18px;
+    margin: 2.5px;
+}
+
+#delete {
+    background: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.delete {
+    
+    background: #FC6060;
+    border: 0.5px solid #FC6060;
+    padding: .37rem .40rem;
+    border-radius: 0.6rem 0 0 0.6rem;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.scrol {
+    height: /* 100px */0;
+}
+
+/* ------------------------------------- Búsqueda y Agregar ------------------------------------- */
+.container-buscar {
+    height: 45px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.caja-buscar {
+    position: absolute;
+    padding: 5px;
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.caja-buscar h3 {
+    height: 0;
+    margin-right: 8px;
+    font-size: larger;
+    font-weight: 500;
+    color: #000;
+    height: 35px;
+    align-self: center;
+}
+
+.caja-buscar input {
+    width: 0;
+    height: 35px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #000;
+    outline: none;
+    border: 1px solid #FC6060;
+    border-radius: 30px;
+    transition: all 0.9s ease;
+}
+
+.btn-buscar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #FC6060;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.caja-buscar:hover input,
+.caja-buscar input:focus {
+    width: 400px;
+
+}
+
+.alinear {
+    float: right;
+}
+
+.agregar {
+    position: relative;
+    padding: 5px;
+    margin-right: 35px;
+    width: 150px;
+    height: 35px;
+    background-image: linear-gradient(to right, #00AC91, #38d39f, #32be8f);
+    background-size: 200%;
+    text-align: center;
+    border-radius: 2rem;
+    transition: .5s;
+}
+
+.agregar:hover {
+    background-position: right;
+}
+
+.agregar button {
+    background: transparent;
+    font-size: 20px;
+}
+
+.agregar a {
+    color: #FFF;
+}
+
+.search-outcome h5 {
+    margin: 15px 0 15px 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.search-outcome h5 i {
+    color: #FC6060;
+}
+
+/* --------------------------------- Tabla / Lista Hostales ----------------------------------- */
+.list-host {
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.id{
+    font-weight: 600;
+}
+
+.title-host {
+    height: 35px;
+    margin: 15px; 
+    width: 20%;
+    text-align: center;
+}
+
+.info-host tr {
+    margin: 20px;
+    top: 15px;
+    bottom: 15px;
+}
+
+.info-host tr :last-child {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* ==================================== Inicio para Huéspedes ====================================== */
+.search-room {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url('/img/fondo-1.jpg');
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.hello-user p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -300%);
+    font-size: xx-large;
+    font-weight: 500;
+    color: white;
+}
+
+.search-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.caja-buscar_hab {
+    position: absolute;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caja-buscar_hab input {
+    width: 500px;
+    height: 40px;
+    padding: 0 15px;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 50px;
+    transition: all 0.9s ease;
+}
+
+.caja-buscar_hab input::placeholder {
+    font-size: 20px;
+    text-align: center;
+}
+
+.btn-buscar_hab {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #00AC91;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+/* .caja-buscar_hab:hover input,
+.caja-buscar_hab input:focus {
+    width: 500px;
+
+} */
+
+/* ================================= Barra de búsqueda resultados ==================================== */
+.search-res {
+    justify-content: center;
+    align-items: center;
+}
+
+.search-hab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.caja-hab {
+    position: relative;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.caja-hab input {
+    width: 350px;
+    height: 35px;
+    padding: 0 15px;
+    font-size: 18px;
+    /* background: #F3F3F3; */
+    color: #000;
+    text-align: center;
+    outline: none;
+    border: 2px solid #FC6060;
+    border-radius: 30px;
+}
+
+.caja-hab input::placeholder {
+    font-size: 18px;
+    text-align: center;
+}
+
+.btn-hab {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #FC6060;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+/* ---------------------------------- Resultado de hostales ------------------------------------- */
+section {
+    margin-top: 25px; /* para cambiar la altura del card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card-va {
+    background: rgba(240, 234, 234, .42);
+    box-shadow: 0 0 .9375em rgba(0, 0, 0, .219);
+    width: 800px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.card_hero {
+    flex: 0 0 50%;
+    position: relative;
+}
+
+.card_img {
+    display: block;
+    width: 100%;
+    height: 218px;
+    position: relative;
+    background-size: cover;
+}
+
+.card_name {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card_name_text {
+    background: #F3F3F3;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 10px 22px;
+    box-shadow: 0 0 .9375em rgba(0, 0, 0, .219);    
+}
+
+.card_contenido {
+    flex: 1;
+    padding: 35px 35px 25px 35px;
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+}
+
+.card_precio {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.card_direccion {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.card_detalles {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.card_boton {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card_btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #00AC91;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .4s;
+}
+
+.card_btn:hover {
+    border-bottom: 2px solid #00AC91;
+}
+
+.card_noche {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+/* ================================= Detalles del hostal ==================================== */
+.view-details {
+    width: 100%;
+    height: 90vh;
+}
+
+.container-details {
+    margin-top: 0; /* para cambiar la altura del card */
+    display: flex;
+    height: 90vh;
+    justify-content:flex-start;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.card-deta_va {
+    background: rgba(240, 234, 234, .42);
+    /* box-shadow: 0 0 .9375em rgba(0, 0, 0, .219); */
+    width: 65%;
+    display:grid;
+    right: 0;
+    border-right: 1px solid #00AC91;
+}
+
+.top-deta {
+    display: flex;
+    height: 60vh;
+}
+
+.card-deta_hero {
+    width: 70%;
+    flex: 0 0 70%;
+    position: relative;
+    background-size: cover;
+}
+
+.reservar {
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-deta_img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+}
+
+.card-deta_name {
+    margin: 10px;
+    text-align: center;
+}
+
+.card-deta_name_text {
+    background: #FFF;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 10px 10px;
+    box-shadow: 0 0 .9375em rgba(0, 0, 0, .219);    
+}
+
+.card-deta_contenido {
+    flex: 1;
+    padding: 25px 35px;
+    height: 30vh;
+    justify-content: center;
+}
+
+.card-deta_info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+}
+
+.card-deta_precio {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card-deta_direccion {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.card-deta_detalles {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card-deta_noche {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.deta-row {
+    display: flex;
+    text-align: right;
+}
+
+.form-res {
+    margin-top: 20%;
+    margin-bottom: 70px;
+}
+
+.label-res {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input[type="date"] {
+    margin: 10px;
+    background: #00AC91;
+    padding: 8px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    text-align: center;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: #F3F3F3;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.cont-btn {
+    margin-top: 35px;
+}
+
+.res-btn {
+	display: inline;
+	width: 80%;
+	height: 45px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #DB4537, #FC6060, #EB493B);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.res-btn:hover {
+	background-position: right;
+}
+
+iframe {
+    position: absolute;
+    width: 35%;
+    height: 90vh;
+    top: 10vh;
+    right: 0;
+    border-left: 1px solid #FC6060;
+}
+
+/* ================================= Confirmación de reservacion ==================================== */
+.msj-confirm {
+	position: absolute;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	top: 34%;
+	right: 5%;
+	margin: 0;
+	padding: 0;
+}
+
+.msj-confirm h1 {
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+
+.msj-confirm h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.msj-confirm p {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.confir-btn {
+	display: inline;
+	width: 180px;
+	height: 45px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #00AC91, #38d39f, #32be8f);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+	text-align: center;
+}
+
+.confir-btn a {
+	text-align: center;
+	color: #FFF;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.confir-btn:hover {
+	background-position: right;
+}
+
+/* ====================================== Mensaje de no results ========================================= */
+.container_nores {
+    width: 90vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :7rem;
+    padding: 0 2rem;
+}
+
+.img_nores {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.img_nores img {
+	width: 500px;
+}
+
+.msj_nores {
+	position: absolute;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	top: 45%;
+	right: 10%;
+	margin: 0;
+	padding: 0;
+}
+
+.msj_nores h1 {
+	font-size: 35px;
+	margin-bottom: 10px;
+}
+
+.msj_nores h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.msj_nores p {
+	font-size: 16px;
+	margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* ====================================== Mensaje de no results place ========================================= */
+.container_noplace {
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :7rem;
+    padding: 0 2rem;
+}
+
+.img_noplace {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.img_noplace img {
+	width: 500px;
+}
+
+.msj_noplace {
+	position: absolute;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	top:45%;
+	right: 5%;
+	margin: 0;
+	padding: 0;
+}
+
+.msj_noplace h1 {
+	font-size: 32px;
+	margin-bottom: 10px;
+    color: #000;
+}
+
+.msj_noplace h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+    font-weight: 500;
+    color: #000;
+}
+
+.msj_noplace p {
+	font-size: 16px;
+	margin-bottom: 10px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* ================================ Reservaciones ======================================= */
+.course {
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    width: 90%;
+    position: relative;
+    margin-top: 16vh;
+    margin-bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.course h6 {
+    opacity: 0.6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.course h2 {
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.preview {
+    background: #FC6060;
+    color: #FFF;
+    padding: 30px;
+    width: 250px;
+    position: relative;
+}
+
+.preview a {
+    color: #FFF;
+    font-size: 16px;
+    opacity: 0.6;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.info {
+    padding: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.progress-wrapper {
+    position: absolute;
+    top: 30px;
+    right: 30%;
+    text-align: right;
+    width: 150px;
+}
+
+.progress {
+    background: #FC6060;
+    border-radius: 3px;
+    height: 5px;
+    width: 100%;
+}
+
+.progress-text {
+    font-size: 10px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+.info p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.reservaciones {
+    background: #FC6060;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    color: #FFF;
+    font-size: 18px;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    letter-spacing: 1px;
+    transform: all .4s ease-in-out;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.msg {
+    font-family: 'Montserrat', sans-serif;
+}
